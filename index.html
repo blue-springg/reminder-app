@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reminder App</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="chat-box">
+        <h1>Welcome to Your Reminder App</h1>
+        <p class="bot-msg">Are you worried about forgetting your friend's birthday? Your final exam?</p>
+        <p class="bot-msg">Just choose what you want us to remind you about:</p>
+        
+        <form action="/select" method="post">
+            <select name="event_type" required>
+                <option value="">Choose an event...</option>
+                <option value="birthday">Birthday</option>
+                <option value="anniversary">Anniversary</option>
+                <option value="exam">Exam</option>
+                <option value="other">Other</option>
+            </select>
+            <br><br>
+            <label>Select Date:</label>
+            <input type="date" name="event_date" required>
+            <br><br>
+            <button type="submit">Start Countdown</button>
+        </form>
+    </div>
+</body>
+</html>
