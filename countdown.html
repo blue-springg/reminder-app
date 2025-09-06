@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="countdown-box">
+        <h2>{{ event_type|capitalize }} Countdown</h2>
+        <p>Only <strong>{{ days_left }}</strong> days left until {{ event_type }} (on {{ event_date }})!</p>
+        <a href="/">Set another reminder</a>
+    </div>
+</body>
+</html>
