@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding: 30px;
+}
+
+.chat-box, .countdown-box {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.bot-msg {
+    background-color: #e2e8f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
