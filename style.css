@@ -1,39 +1,37 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body Styling */
 body {
-  background-color: #fffaf0; /* Creamy white background */
+  background-color: #fffaf0;
   font-family: 'Press Start 2P', cursive;
   color: #4e3d28;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  transition: background 0.3s ease;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Toggle Button */
+.mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 /* Container */
 .container {
-  background-color: #f5deb3; /* Light biscuit color */
+  background-color: #f5deb3;
   border: 5px dashed #a67c52;
   padding: 30px;
   border-radius: 20px;
-  width: 400px;
-  text-align: center;
+  width: 420px;
   box-shadow: 4px 4px 0 #a67c52;
+  transition: background 0.3s ease;
 }
 
-/* Heading */
-.container h1 {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-/* Progress Bar */
+/* Progress */
 .progress-container {
   background-color: #fff;
   border: 2px solid #a67c52;
@@ -51,21 +49,26 @@ body {
   transition: width 0.3s ease-in-out;
 }
 
-/* To-Do Box */
+/* Donut Label */
+.donut-label {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* Task Box */
 .todo-box {
   background-color: #fffaf0;
   border: 2px solid #d2b48c;
   border-radius: 15px;
   padding: 15px;
-  max-height: 250px;
+  max-height: 300px;
   overflow-y: auto;
   box-shadow: inset 2px 2px 4px #e0cba8;
 }
 
-/* To-Do List */
+/* Task List */
 ul#todo-list {
-  list-style-type: none;
-  text-align: left;
+  list-style: none;
   padding-left: 0;
 }
 
@@ -73,43 +76,50 @@ ul#todo-list li {
   margin: 10px 0;
   font-size: 12px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-}
-
-.task-checkbox {
-  appearance: none;
-  width: 18px;
-  height: 18px;
-  border: 2px solid #a67c52;
-  border-radius: 5px;
-  margin-right: 10px;
-  background-color: #fff;
-  position: relative;
+  background: #fff;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid #d2b48c;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-.task-checkbox:checked::before {
-  content: "✔️";
-  position: absolute;
-  top: -2px;
-  left: 2px;
-  font-size: 14px;
+ul#todo-list li.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+  background-color: #e0cba8;
 }
 
-/* Add Task Section */
+/* Task Info */
+.task-text {
+  flex: 1;
+  text-align: left;
+}
+
+/* Time Display */
+.task-time {
+  font-size: 10px;
+  margin-left: 10px;
+  color: #a67c52;
+}
+
+/* Add Task */
 .add-task {
   margin-top: 15px;
   display: flex;
-  gap: 10px;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-#new-task {
-  flex: 1;
-  padding: 5px 10px;
+#new-task, #task-time {
+  padding: 5px;
   font-family: 'Press Start 2P', cursive;
   font-size: 10px;
   border: 2px solid #a67c52;
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: #fff;
   color: #4e3d28;
 }
@@ -119,12 +129,43 @@ ul#todo-list li {
   background-color: #a67c52;
   border: none;
   color: white;
-  border-radius: 10px;
+  border-radius: 8px;
+  font-size: 12px;
   cursor: pointer;
-  font-size: 14px;
-  transition: background 0.2s ease-in-out;
 }
 
-#add-btn:hover {
-  background-color: #8b5e3c;
+/* Dark Mode */
+body.dark-mode {
+  background-color: #2c1a0f;
+  color: #fff;
+}
+
+body.dark-mode .container {
+  background-color: #4e2b1b;
+  border-color: #8b5e3c;
+}
+
+body.dark-mode .progress-container {
+  background-color: #3d2a1a;
+  border-color: #8b5e3c;
+}
+
+body.dark-mode .progress-bar {
+  background-color: #ffd700;
+}
+
+body.dark-mode .todo-box {
+  background-color: #5a3926;
+  border-color: #d4a373;
+  box-shadow: inset 2px 2px 6px #3e2416;
+}
+
+body.dark-mode ul#todo-list li {
+  background-color: #6b422f;
+  color: #fff;
+  border-color: #d4a373;
+}
+
+body.dark-mode ul#todo-list li.done {
+  background-color: #4a2c1d;
 }
