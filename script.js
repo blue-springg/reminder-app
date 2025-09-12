@@ -59,3 +59,10 @@ document.addEventListener('DOMContentLoaded', function () {
     modeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
   });
 });
+
+// Show current date
+const dateBox = document.getElementById('date-box');
+const now = new Date();
+const options = { weekday: 'long', day: 'numeric', month: 'long' };
+dateBox.textContent = `📅 ${now.toLocaleDateString('en-US', options)}`;
+
