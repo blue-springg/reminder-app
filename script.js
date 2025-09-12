@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const li = document.createElement('li');
 
       li.innerHTML = `
+        <span class="task-donut">🍩</span>
         <span class="task-text">${taskText}</span>
         ${taskTime ? `<span class="task-time">⏰ ${taskTime}</span>` : ''}
       `;
@@ -58,4 +59,3 @@ document.addEventListener('DOMContentLoaded', function () {
     modeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
   });
 });
-
