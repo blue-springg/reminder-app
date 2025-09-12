@@ -58,3 +58,4 @@ document.addEventListener('DOMContentLoaded', function () {
     modeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
   });
 });
+
