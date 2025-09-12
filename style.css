@@ -3,25 +3,8 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: var(--cream);
-  font-family: 'Press Start 2P', cursive;
-  color: var(--dark-brown);
-  margin: 0;
-  padding: 0;
-}
-
-.center-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 20px;
-  background-color: var(--cream);
-}
-
-/* 🍪 Theme Colors */
 :root {
+  /* Colors */
   --cream: #fffaf0;
   --brown: #af7a44;
   --light-brown: #c1a175;
@@ -40,14 +23,65 @@ body {
   --dark-border: #d2b48c;
   --dark-button: #a67c52;
   --dark-button-hover: #d2b48c;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 15px;
+  --space-xl: 20px;
+  --space-xxl: 30px;
+
+  /* Font Sizes */
+  --font-xs: 9px;
+  --font-sm: 10px;
+  --font-sm2: 12px;
+  --font-md: 14px;
+  --font-lg: 18px;
+  --font-xl: 24px;
+
+  /* Sizes */
+  --width-date-box: 180px;
+  --height-date-box: 100px;
+  --width-day-circle: 40px;
+  --progress-height: 24px;
+  --border-radius: 10px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 15px;
+
+  /* Shadows */
+  --shadow-light: 2px 2px 0 var(--brown);
+  --shadow-md: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  --shadow-inset-light: inset 1px 1px 4px #d2b48c;
+  --shadow-inset-md: inset 2px 2px 4px #e0cba8;
+  --shadow-bar: 1px 1px 5px #a67c52aa;
+  --shadow-button: 2px 2px 6px #4e3d28aa;
+  --shadow-button-hover: 2px 2px 10px #3a2c1a;
+}
+
+body {
+  background-color: var(--cream);
+  font-family: 'Press Start 2P', cursive;
+  color: var(--dark-brown);
+  margin: 0;
+  padding: 0;
+}
+
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--space-xl);
+  background-color: var(--cream);
 }
 
 /* 🌙 Theme Toggle */
 .mode-toggle {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  font-size: 20px;
+  top: var(--space-xl);
+  right: var(--space-xl);
+  font-size: var(--font-lg);
   cursor: pointer;
   z-index: 10;
 }
@@ -55,13 +89,13 @@ body {
 .wrapper {
   width: 100%;
   max-width: 800px;
-  padding: 20px;
+  padding: var(--space-xl);
 }
 
 .title-text {
-  font-size: 24px;
+  font-size: var(--font-xl);
   color: var(--dark-brown);
-  margin-bottom: 30px;
+  margin-bottom: var(--space-xxl);
   text-align: center;
 }
 
@@ -70,27 +104,27 @@ body {
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: var(--space-md);
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: var(--space-lg);
 }
 
 /* 📅 Date Box */
 .date-box {
   background-color: var(--accent-bg);
   border: 3px solid var(--brown);
-  border-radius: 12px;
-  padding: 15px;
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-lg);
   width: 100%;
-  max-width: 180px;
-  height: 100px;
-  box-shadow: 2px 2px 0 var(--brown);
+  max-width: var(--width-date-box);
+  height: var(--height-date-box);
+  box-shadow: var(--shadow-light);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  font-size: 12px;
+  gap: var(--space-sm);
+  font-size: var(--font-sm2);
   color: var(--dark-brown);
 }
 
@@ -98,12 +132,12 @@ body {
   background-color: var(--brown);
   color: var(--white);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: var(--width-day-circle);
+  height: var(--width-day-circle);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: var(--font-sm2);
 }
 
 /* 🧁 Progress Box */
@@ -111,18 +145,18 @@ body {
   flex-grow: 1;
   min-width: 250px;
   background-color: var(--progress-bg);
-  border-radius: 12px;
-  padding: 15px 20px;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius-lg);
+  padding: var(--space-lg) var(--space-xl);
+  box-shadow: var(--shadow-md);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--space-md);
   color: var(--white);
   font-weight: bold;
 }
 
 .progress-label {
-  font-size: 14px;
+  font-size: var(--font-md);
   text-align: center;
   color: var(--label-color);
 }
@@ -130,8 +164,8 @@ body {
 .progress-container {
   background-color: var(--dark-brown);
   border: 2px solid var(--brown);
-  height: 24px;
-  border-radius: 12px;
+  height: var(--progress-height);
+  border-radius: var(--border-radius-xl);
   overflow: hidden;
   box-shadow: inset 1px 1px 3px #563d1a;
 }
@@ -141,35 +175,35 @@ body {
   height: 100%;
   width: 0%;
   transition: width 0.3s ease-in-out;
-  box-shadow: 1px 1px 5px #a67c52aa;
+  box-shadow: var(--shadow-bar);
 }
 
 /* ✍️ Input Section */
 .input-section {
   display: flex;
-  gap: 12px;
+  gap: var(--space-md);
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   max-width: 600px;
   background-color: var(--light-brown);
-  padding: 15px 20px;
-  border-radius: 12px;
+  padding: var(--space-lg) var(--space-xl);
+  border-radius: var(--border-radius-lg);
   box-shadow: 3px 3px 5px #a67c5266;
-  margin-bottom: 30px;
+  margin-bottom: var(--space-xxl);
 }
 
 #new-task,
 #task-time {
-  padding: 10px 14px;
+  padding: 10px 14px; /* these can stay fixed for input padding */
   font-family: 'Press Start 2P', cursive;
-  font-size: 12px;
+  font-size: var(--font-sm2);
   border: 2px solid var(--brown);
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   background-color: var(--white);
   color: var(--dark-brown);
   width: 180px;
-  box-shadow: inset 1px 1px 4px #d2b48c;
+  box-shadow: var(--shadow-inset-light);
   transition: border-color 0.2s ease;
 }
 
@@ -180,30 +214,30 @@ body {
 }
 
 #add-btn {
-  padding: 10px 18px;
+  padding: 10px 18px; /* fixed padding */
   background-color: var(--brown);
   border: none;
   color: var(--white);
-  border-radius: 10px;
-  font-size: 14px;
+  border-radius: var(--border-radius);
+  font-size: var(--font-md);
   cursor: pointer;
-  box-shadow: 2px 2px 6px #4e3d28aa;
+  box-shadow: var(--shadow-button);
   transition: background-color 0.3s ease;
 }
 
 #add-btn:hover {
   background-color: var(--dark-brown);
-  box-shadow: 2px 2px 10px #3a2c1a;
+  box-shadow: var(--shadow-button-hover);
 }
 
 /* 📋 Task Box */
 .todo-box {
   background-color: var(--cream);
   border: 3px solid var(--light-brown);
-  border-radius: 15px;
-  padding: 20px;
+  border-radius: var(--border-radius-xl);
+  padding: var(--space-xl);
   width: 100%;
-  box-shadow: inset 2px 2px 4px #e0cba8;
+  box-shadow: var(--shadow-inset-md);
   max-height: 400px;
   overflow-y: auto;
 }
@@ -217,25 +251,25 @@ ul#todo-list {
 ul#todo-list li {
   background: var(--white);
   border: 1px solid var(--light-brown);
-  padding: 8px 10px;
-  border-radius: 10px;
-  margin: 8px 0;
-  font-size: 10px;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius);
+  margin: var(--space-sm) 0;
+  font-size: var(--font-sm);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-sm);
   cursor: pointer;
   transition: background 0.2s ease;
 }
 
 ul#todo-list li.done {
   text-decoration: line-through;
-  background-color: #e0cba8;
+  background-color: #e0cba8; /* No variable for this color */
   opacity: 0.7;
 }
 
 .task-donut {
-  font-size: 12px;
+  font-size: var(--font-sm2);
 }
 
 .task-text {
@@ -244,7 +278,7 @@ ul#todo-list li.done {
 }
 
 .task-time {
-  font-size: 9px;
+  font-size: var(--font-xs);
   color: var(--brown);
   white-space: nowrap;
 }
@@ -298,8 +332,8 @@ body.dark-mode .todo-box {
 /* 📱 Responsive Adjustments */
 @media (max-width: 600px) {
   .title-text {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: var(--font-lg);
+    margin-bottom: var(--space-xl);
   }
 
   .row {
@@ -316,7 +350,7 @@ body.dark-mode .todo-box {
   .input-section {
     flex-direction: column;
     align-items: stretch;
-    padding: 12px;
+    padding: var(--space-md);
   }
 
   #new-task,
@@ -328,10 +362,10 @@ body.dark-mode .todo-box {
   ul#todo-list li {
     flex-direction: column;
     align-items: flex-start;
-    font-size: 12px;
+    font-size: var(--font-sm2);
   }
 
   .task-time {
-    font-size: 10px;
+    font-size: var(--font-sm);
   }
 }
