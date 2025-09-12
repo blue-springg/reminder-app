@@ -192,3 +192,16 @@ body.dark-mode ul#todo-list li {
 body.dark-mode ul#todo-list li.done {
   background-color: #4a2c1d;
 }
+
+/* Creamy time input */
+#task-time {
+  background-color: #fffaf0;
+  color: #4e3d28;
+  border: 2px solid #d2b48c;
+}
+
+#task-time::-webkit-calendar-picker-indicator {
+  filter: invert(40%) sepia(60%) saturate(300%) hue-rotate(10deg) brightness(95%);
+}
+
+
