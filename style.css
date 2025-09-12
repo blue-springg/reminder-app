@@ -18,16 +18,7 @@ body {
   padding: 0;
 }
 
-.wrapper {
-  max-width: 800px;
-  margin: auto;
-  padding: 30px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* 🌙 Toggle */
+/* 🌙 Theme Toggle */
 .mode-toggle {
   position: fixed;
   top: 20px;
@@ -37,51 +28,73 @@ body {
   z-index: 10;
 }
 
-/* 🍪 Title */
-.title-box {
-  font-size: 20px;
-  background-color: var(--cream);
-  padding: 15px 30px;
-  border: 4px dashed var(--brown);
-  border-radius: 16px;
-  margin-bottom: 30px;
-  box-shadow: 3px 3px 0 var(--brown);
+/* 🍪 Wrapper */
+.wrapper {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* 📦 Boxes Row */
+/* 🍪 Title without border */
+.title-text {
+  font-size: 24px;
+  color: var(--dark-brown);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* 📦 Row layout for date and progress */
 .row {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
   gap: 20px;
   width: 100%;
   margin-bottom: 20px;
 }
 
-/* 📅 Date Box */
+/* 📅 Date Box (stacked layout) */
 .date-box {
   background-color: var(--cream);
   border: 3px solid var(--brown);
   border-radius: 12px;
-  padding: 20px;
-  font-size: 12px;
+  padding: 15px;
   width: 180px;
   height: 100px;
   box-shadow: 2px 2px 0 var(--brown);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--dark-brown);
 }
 
-/* 📈 Progress Box */
+#day-circle {
+  background-color: var(--brown);
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+/* 🧁 Progress Box */
 .progress-box {
   flex-grow: 1;
   min-width: 280px;
   background-color: var(--progress-bg);
   border-radius: 12px;
   padding: 15px 20px;
-  box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -90,9 +103,9 @@ body {
 }
 
 .progress-label {
-  font-size: 12px;
-  text-align: left;
-  letter-spacing: 1.5px;
+  font-size: 14px;
+  text-align: center;
+  color: #fbe4d8;
 }
 
 .progress-container {
@@ -112,7 +125,7 @@ body {
   box-shadow: 1px 1px 5px #a67c52aa;
 }
 
-/* ✍️ Input Section separated from Progress */
+/* ✍️ Input Section */
 .input-section {
   display: flex;
   gap: 12px;
@@ -217,4 +230,46 @@ ul#todo-list li.done {
   font-size: 9px;
   color: var(--brown);
   white-space: nowrap;
+}
+
+/* 🌙 Dark Mode Support */
+body.dark-mode {
+  background-color: #1e1a16;
+  color: #f5deb3;
+}
+
+body.dark-mode .title-text,
+body.dark-mode .progress-label,
+body.dark-mode .date-box {
+  color: #fbe4d8;
+}
+
+body.dark-mode .date-box {
+  background-color: #2f261f;
+  border-color: #d2b48c;
+}
+
+body.dark-mode .input-section {
+  background-color: #3a2f25;
+}
+
+body.dark-mode #new-task,
+body.dark-mode #task-time {
+  background-color: #2e231c;
+  color: #f5deb3;
+  border-color: #a67c52;
+}
+
+body.dark-mode #add-btn {
+  background-color: #a67c52;
+}
+
+body.dark-mode #add-btn:hover {
+  background-color: #d2b48c;
+  color: #4e3d28;
+}
+
+body.dark-mode .todo-box {
+  background-color: #2f261f;
+  border-color: #d2b48c;
 }
