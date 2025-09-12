@@ -1,20 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🍪 My To-Do List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
+  <!-- 🌙 Theme Toggle -->
   <div class="mode-toggle" id="mode-toggle">🌙</div>
 
+  <!-- 🧁 Main Wrapper -->
   <div class="wrapper">
+
     <!-- 🍪 Title -->
     <div class="title-box">🍪 My To-Do List</div>
 
-    <!-- Top Row: Date & Progress -->
+    <!-- 📦 Top Row: Date + Progress -->
     <div class="row">
+      <!-- 📅 Date Box -->
       <div class="box date-box" id="date-box">📅</div>
 
+      <!-- 📈 Progress Box + Input -->
       <div class="box progress-box">
         <div class="progress-label">📈 Progress</div>
         <div class="progress-container">
           <div class="progress-bar" id="progress-bar"></div>
         </div>
-        <!-- Input under progress -->
+
+        <!-- ✍️ Input Section -->
         <div class="input-box">
           <input type="text" id="new-task" placeholder="Write your task..." />
           <input type="time" id="task-time" title="Choose time" />
@@ -23,12 +38,15 @@
       </div>
     </div>
 
-    <!-- Task List -->
+    <!-- 📋 Task List -->
     <div class="todo-box">
       <div class="donut-label">🍩 All Tasks</div>
       <ul id="todo-list"></ul>
     </div>
+
   </div>
 
+  <!-- 📜 Scripts -->
   <script src="script.js"></script>
 </body>
+</html>
