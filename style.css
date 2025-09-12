@@ -27,12 +27,12 @@ body.dark-mode .center-container {
 /* 🍪 Biscuit Game Theme */
 :root {
   --cream: #fffaf0;
-  --brown: #a67c52;
-  --light-brown: #d2b48c;
-  --dark-brown: #4e3d28;
+  --brown: #af7a44;
+  --light-brown: #c1a175;
+  --dark-brown: #bb9d77;
   --white: #fff;
-  --progress-bg: #6b4f34;
-  --progress-fill: #d2b48c;
+  --progress-bg: #d5ae85;
+  --progress-fill: #c5b197;
 }
 
 /* 🌙 Theme Toggle */
@@ -70,7 +70,7 @@ body.dark-mode .center-container {
 
 /* 📅 Date Box */
 .date-box {
-  background-color: #ffe9c6;
+  background-color: #dda56e;
   border: 3px solid var(--brown);
   border-radius: 12px;
   padding: 15px;
