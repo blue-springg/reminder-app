@@ -8,48 +8,48 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- 🌙 Theme Toggle -->
-  <div class="mode-toggle" id="mode-toggle">🌙</div>
+  <div class="center-container">
+    <!-- 🌙 Theme Toggle -->
+    <div class="mode-toggle" id="mode-toggle">🌙</div>
 
-  <!-- 🧁 Main Wrapper -->
-  <div class="wrapper">
+    <!-- 🧁 Main Wrapper -->
+    <div class="wrapper">
 
-    <!-- 🍪 Title -->
-    <div class="title-text">🍪 My To-Do List 🍪</div>
+      <!-- 🍪 Title -->
+      <div class="title-text">🍪 My To-Do List 🍪</div>
 
-    <!-- 📦 Top Row: Date + Progress -->
-    <div class="row">
-      <!-- 📅 Date Box -->
-      <div class="box date-box" id="date-box">
-        <div id="weekday"></div>
-        <div id="day-circle"></div>
-        <div id="month-text"></div>
-      </div>
+      <!-- 📦 Top Row: Date + Progress -->
+      <div class="row">
+        <!-- 📅 Date Box -->
+        <div class="box date-box" id="date-box">
+          <div id="weekday"></div>
+          <div id="day-circle"></div>
+          <div id="month-text"></div>
+        </div>
 
-      <!-- 🧁 Progress Box -->
-      <div class="box progress-box">
-        <div class="progress-label">🧁 Progress 🧁</div>
-        <div class="progress-container">
-          <div class="progress-bar" id="progress-bar"></div>
+        <!-- 🧁 Progress Box -->
+        <div class="box progress-box">
+          <div class="progress-label">🧁 Progress 🧁</div>
+          <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- ✍️ Input Section -->
-    <div class="input-section">
-      <input type="text" id="new-task" placeholder="Write your task..." />
-      <input type="time" id="task-time" title="Choose time" />
-      <button id="add-btn">➕</button>
-    </div>
+      <!-- ✍️ Input Section -->
+      <div class="input-section">
+        <input type="text" id="new-task" placeholder="Write your task..." />
+        <input type="time" id="task-time" title="Choose time" />
+        <button id="add-btn">➕</button>
+      </div>
 
-    <!-- 📋 Task List -->
-    <div class="todo-box">
-      <div class="donut-label">🍩 All Tasks</div>
-      <ul id="todo-list"></ul>
+      <!-- 📋 Task List -->
+      <div class="todo-box">
+        <div class="donut-label">🍩 All Tasks</div>
+        <ul id="todo-list"></ul>
+      </div>
     </div>
   </div>
 
-  <!-- 📜 Scripts -->
   <script src="script.js"></script>
 </body>
-</html>
