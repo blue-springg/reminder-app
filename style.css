@@ -20,19 +20,26 @@ body {
   background-color: var(--cream);
 }
 
-body.dark-mode .center-container {
-  background-color: #1e1a16;
-}
-
-/* 🍪 Biscuit Game Theme */
+/* 🍪 Theme Colors */
 :root {
   --cream: #fffaf0;
   --brown: #af7a44;
   --light-brown: #c1a175;
   --dark-brown: #bb9d77;
   --white: #fff;
+
   --progress-bg: #d5ae85;
   --progress-fill: #c5b197;
+  --label-color: #fbe4d8;
+  --accent-bg: #dda56e;
+
+  --dark-bg: #1e1a16;
+  --dark-text: #f5deb3;
+  --dark-box: #2f261f;
+  --dark-input: #2e231c;
+  --dark-border: #d2b48c;
+  --dark-button: #a67c52;
+  --dark-button-hover: #d2b48c;
 }
 
 /* 🌙 Theme Toggle */
@@ -70,7 +77,7 @@ body.dark-mode .center-container {
 
 /* 📅 Date Box */
 .date-box {
-  background-color: #dda56e;
+  background-color: var(--accent-bg);
   border: 3px solid var(--brown);
   border-radius: 12px;
   padding: 15px;
@@ -89,7 +96,7 @@ body.dark-mode .center-container {
 
 #day-circle {
   background-color: var(--brown);
-  color: white;
+  color: var(--white);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -117,7 +124,7 @@ body.dark-mode .center-container {
 .progress-label {
   font-size: 14px;
   text-align: center;
-  color: #fbe4d8;
+  color: var(--label-color);
 }
 
 .progress-container {
@@ -244,44 +251,48 @@ ul#todo-list li.done {
 
 /* 🌙 Dark Mode Support */
 body.dark-mode {
-  background-color: #1e1a16;
-  color: #f5deb3;
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body.dark-mode .center-container {
+  background-color: var(--dark-bg);
 }
 
 body.dark-mode .title-text,
 body.dark-mode .progress-label,
 body.dark-mode .date-box {
-  color: #3b2e24;
+  color: var(--dark-text);
 }
 
 body.dark-mode .date-box {
-  background-color: #2f261f;
-  border-color: #d2b48c;
+  background-color: var(--dark-box);
+  border-color: var(--dark-border);
 }
 
 body.dark-mode .input-section {
-  background-color: #3a2f25;
+  background-color: var(--dark-box);
 }
 
 body.dark-mode #new-task,
 body.dark-mode #task-time {
-  background-color: #2e231c;
-  color: #f5deb3;
-  border-color: #a67c52;
+  background-color: var(--dark-input);
+  color: var(--dark-text);
+  border-color: var(--dark-border);
 }
 
 body.dark-mode #add-btn {
-  background-color: #a67c52;
+  background-color: var(--dark-button);
 }
 
 body.dark-mode #add-btn:hover {
-  background-color: #d2b48c;
-  color: #4e3d28;
+  background-color: var(--dark-button-hover);
+  color: var(--dark-brown);
 }
 
 body.dark-mode .todo-box {
-  background-color: #2f261f;
-  border-color: #d2b48c;
+  background-color: var(--dark-box);
+  border-color: var(--dark-border);
 }
 
 /* 📱 Responsive Adjustments */
