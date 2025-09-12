@@ -1,3 +1,18 @@
+/* 🌐 Full Page Centering */
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(--cream);
+}
+
+body.dark-mode .center-container {
+  background-color: #1e1a16;
+}
+
 /* 🍪 Biscuit Game Theme */
 :root {
   --cream: #fffaf0;
@@ -28,14 +43,13 @@ body {
   z-index: 10;
 }
 
-/* 🍪 Wrapper */
-.wrapper {
-  max-width: 800px;
-  margin: auto;
-  padding: 30px 20px;
+.row {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
 }
 
 /* 🍪 Title without border */
@@ -59,7 +73,7 @@ body {
 
 /* 📅 Date Box (stacked layout) */
 .date-box {
-  background-color: var(--cream);
+  background-color: #ffe9c6; 
   border: 3px solid var(--brown);
   border-radius: 12px;
   padding: 15px;
@@ -241,7 +255,7 @@ body.dark-mode {
 body.dark-mode .title-text,
 body.dark-mode .progress-label,
 body.dark-mode .date-box {
-  color: #fbe4d8;
+  color: #3b2e24;
 }
 
 body.dark-mode .date-box {
