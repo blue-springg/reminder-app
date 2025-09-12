@@ -1,29 +1,30 @@
-/* Reset + Font */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* 🍪 Biscuit Game Theme */
+:root {
+  --cream: #fffaf0;
+  --brown: #a67c52;
+  --light-brown: #d2b48c;
+  --dark-brown: #4e3d28;
 }
 
 body {
-  background-color: #fffaf0;
+  background-color: var(--cream);
   font-family: 'Press Start 2P', cursive;
-  color: #4e3d28;
+  color: var(--dark-brown);
   height: 100vh;
-  transition: background 0.3s ease;
+  margin: 0;
+  padding: 0;
 }
 
-/* Full center wrapper */
 .wrapper {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
 }
 
-/* Toggle Button */
+/* 🌙 Toggle */
 .mode-toggle {
   position: fixed;
   top: 20px;
@@ -33,140 +34,100 @@ body {
   z-index: 10;
 }
 
-/* Container */
-.container {
-  background-color: #f5deb3;
-  border: 5px dashed #a67c52;
-  padding: 30px;
-  border-radius: 20px;
-  width: 480px;
-  box-shadow: 4px 4px 0 #a67c52;
-  transition: background 0.3s ease;
-}
-
-h1 {
-  font-size: 24px;
+/* 🍪 Title */
+.title-box {
+  font-size: 20px;
+  background-color: var(--cream);
+  padding: 15px 30px;
+  border: 4px dashed var(--brown);
+  border-radius: 16px;
   margin-bottom: 30px;
-  margin-top: -50px; /* Pull it visually outside the box */
-  position: relative;
-  z-index: 1;
-  background-color: #fffaf0;
-  padding: 10px 20px;
-  border: 3px dashed #a67c52;
-  border-radius: 12px;
-  display: inline-block;
-  box-shadow: 2px 2px 0 #a67c52;
+  box-shadow: 3px 3px 0 var(--brown);
 }
 
-/* Progress */
-.progress-container {
-  background-color: #fff;
-  border: 2px solid #a67c52;
-  height: 20px;
+/* 📦 Boxes Row */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
   width: 100%;
+  margin-bottom: 30px;
+}
+
+/* 📅 Date Box */
+.date-box {
+  background-color: var(--cream);
+  border: 3px solid var(--brown);
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 12px;
+  width: 180px;
+  height: 100px;
+  box-shadow: 2px 2px 0 var(--brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* 📈 Progress + Input */
+.progress-box {
+  flex-grow: 1;
+  min-width: 280px;
+  background-color: var(--cream);
+  border: 3px dashed var(--light-brown);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 2px 2px 0 var(--light-brown);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.progress-label {
+  font-size: 10px;
+  text-align: left;
+}
+
+.progress-container {
+  background-color: white;
+  border: 2px solid var(--brown);
+  height: 20px;
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 20px;
 }
 
 .progress-bar {
-  background-color: #a67c52;
+  background-color: var(--brown);
   height: 100%;
   width: 0%;
   transition: width 0.3s ease-in-out;
 }
 
-/* Donut Label */
-.donut-label {
-  font-size: 12px;
-  margin-bottom: 10px;
-}
-
-.todo-box {
-  background-color: #fffaf0;
-  border: 2px solid #d2b48c;
-  border-radius: 15px;
-  padding: 20px;
-  max-height: 400px;
-  min-height: 250px;
-  width: 100%;
-  box-shadow: inset 2px 2px 4px #e0cba8;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-ul#todo-list {
-  flex-grow: 1;
-  overflow-y: auto;
-  margin-bottom: 15px;
-}
-
-
-
-/* Task List - UPDATED */
-ul#todo-list li {
-  margin: 10px 0;
-  font-size: 10px;
-  display: flex;
-  align-items: center;
-  background: #fff;
-  padding: 6px 10px;
-  border-radius: 10px;
-  border: 1px solid #d2b48c;
-  cursor: pointer;
-  transition: background 0.2s ease;
-  word-break: break-word;
-  gap: 8px;
-}
-
-ul#todo-list li.done {
-  text-decoration: line-through;
-  opacity: 0.6;
-  background-color: #e0cba8;
-}
-
-/* NEW: Donut Icon */
-.task-donut {
-  font-size: 12px;
-}
-
-/* Task Info */
-.task-text {
-  flex: 1;
-  text-align: left;
-}
-
-/* Time Display */
-.task-time {
-  font-size: 9px;
-  color: #a67c52;
-  white-space: nowrap;
-}
-
-/* Add Task */
-.add-task {
-  margin-top: 15px;
+/* ✍️ Input Box inside Progress Box */
+.input-box {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-#new-task, #task-time {
-  padding: 5px;
+#new-task,
+#task-time {
+  padding: 6px;
   font-family: 'Press Start 2P', cursive;
   font-size: 9px;
-  border: 2px solid #a67c52;
+  border: 2px solid var(--brown);
   border-radius: 8px;
-  background-color: #fff;
-  color: #4e3d28;
+  background-color: white;
+  color: var(--dark-brown);
   width: 120px;
 }
 
 #add-btn {
-  padding: 5px 10px;
-  background-color: #a67c52;
+  padding: 6px 10px;
+  background-color: var(--brown);
   border: none;
   color: white;
   border-radius: 8px;
@@ -174,114 +135,55 @@ ul#todo-list li.done {
   cursor: pointer;
 }
 
-/* Dark Mode */
-body.dark-mode {
-  background-color: #2c1a0f;
-  color: #fff;
-}
-
-body.dark-mode .container {
-  background-color: #4e2b1b;
-  border-color: #8b5e3c;
-}
-
-body.dark-mode .progress-container {
-  background-color: #3d2a1a;
-  border-color: #8b5e3c;
-}
-
-body.dark-mode .progress-bar {
-  background-color: #ffd700;
-}
-
-body.dark-mode .todo-box {
-  background-color: #5a3926;
-  border-color: #d4a373;
-  box-shadow: inset 2px 2px 6px #3e2416;
-}
-
-body.dark-mode ul#todo-list li {
-  background-color: #6b422f;
-  color: #fff;
-  border-color: #d4a373;
-}
-
-body.dark-mode ul#todo-list li.done {
-  background-color: #4a2c1d;
-}
-
-/* Creamy time input */
-#task-time {
-  background-color: #fffaf0;
-  color: #4e3d28;
-  border: 2px solid #d2b48c;
-}
-
-#task-time::-webkit-calendar-picker-indicator {
-  filter: invert(40%) sepia(60%) saturate(300%) hue-rotate(10deg) brightness(95%);
-}
-
-/* Title Box */
-.title-box {
-  font-size: 20px;
-  background-color: #fffaf0;
-  padding: 15px 30px;
-  border: 4px dashed #a67c52;
-  border-radius: 16px;
-  margin-bottom: 20px;
-  box-shadow: 3px 3px 0 #a67c52;
-}
-
-/* Date + Progress in row */
-.top-section {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-/* Date Box */
-.date-box {
-  background-color: #fffaf0;
-  border: 3px solid #a67c52;
-  border-radius: 12px;
-  padding: 20px;
-  font-size: 12px;
-  width: 160px;
-  box-shadow: 2px 2px 0 #a67c52;
-}
-
-/* Progress Section */
-.progress-section {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 240px;
-}
-
-.progress-label {
-  font-size: 12px;
-  color: #4e3d28;
-}
-
-/* Input Box */
-.input-box {
-  background-color: #fffaf0;
-  border: 3px dashed #d2b48c;
-  padding: 15px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  box-shadow: 2px 2px 0 #e0cba8;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* Task Box - already styled */
+/* 📋 Task Box */
 .todo-box {
+  background-color: var(--cream);
+  border: 3px solid var(--light-brown);
+  border-radius: 15px;
+  padding: 20px;
   width: 100%;
-  max-width: 500px;
+  box-shadow: inset 2px 2px 4px #e0cba8;
+  max-height: 400px;
+  overflow-y: auto;
 }
 
+ul#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul#todo-list li {
+  background: white;
+  border: 1px solid var(--light-brown);
+  padding: 8px 10px;
+  border-radius: 10px;
+  margin: 8px 0;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+ul#todo-list li.done {
+  text-decoration: line-through;
+  background-color: #e0cba8;
+  opacity: 0.7;
+}
+
+.task-donut {
+  font-size: 12px;
+}
+
+.task-text {
+  flex: 1;
+  text-align: left;
+}
+
+.task-time {
+  font-size: 9px;
+  color: var(--brown);
+  white-space: nowrap;
+}
