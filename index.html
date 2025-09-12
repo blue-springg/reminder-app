@@ -10,25 +10,34 @@
 <body>
   <div class="mode-toggle" id="mode-toggle">🌙</div>
 
-<div class="wrapper">
-  <h1>🍪 My To-Do List</h1> <!-- ⬅ Moved outside .container -->
+  <div class="wrapper">
+    <!-- 🍪 Title -->
+    <div class="title-box">🍪 My To-Do List</div>
 
-<div class="progress-container">
-  <div class="progress-bar" id="progress-bar"></div>
-</div>
-      <div class="todo-box">
-        <div class="donut-label">🍩 All Tasks</div>
-        <ul id="todo-list"></ul>
-
-        <div class="add-task">
-          <input type="text" id="new-task" placeholder="Add new task..." />
-          <input type="time" id="task-time" title="Choose time" />
-          <button id="add-btn">➕</button>
+    <!-- Date + Progress -->
+    <div class="top-section">
+      <div class="date-box" id="date-box">📅</div>
+      <div class="progress-section">
+        <div class="progress-label">📈 Progress</div>
+        <div class="progress-container">
+          <div class="progress-bar" id="progress-bar"></div>
         </div>
       </div>
+    </div>
+
+    <!-- Input Box -->
+    <div class="input-box">
+      <input type="text" id="new-task" placeholder="Add new task..." />
+      <input type="time" id="task-time" title="Choose time" />
+      <button id="add-btn">➕</button>
+    </div>
+
+    <!-- Task List Box -->
+    <div class="todo-box">
+      <div class="donut-label">🍩 All Tasks</div>
+      <ul id="todo-list"></ul>
     </div>
   </div>
 
   <script src="script.js"></script>
 </body>
-</html>
