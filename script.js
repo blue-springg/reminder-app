@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const progressBar = document.getElementById('progress-bar');
   const modeToggle = document.getElementById('mode-toggle');
 
-  // Add New Task
+  // 🧁 Add New Task
   addBtn.addEventListener('click', function () {
     const taskText = newTaskInput.value.trim();
     const taskTime = taskTimeInput.value;
@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ${taskTime ? `<span class="task-time">⏰ ${taskTime}</span>` : ''}
       `;
 
+      // Toggle task done
       li.addEventListener('click', function () {
         li.classList.toggle('done');
         updateProgress();
@@ -28,19 +29,18 @@ document.addEventListener('DOMContentLoaded', function () {
       todoList.appendChild(li);
       newTaskInput.value = '';
       taskTimeInput.value = '';
-
       updateProgress();
     }
   });
 
-  // Allow Enter to Add
+  // 🧁 Allow Enter key to add task
   newTaskInput.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
       addBtn.click();
     }
   });
 
-  // Update Progress
+  // 📊 Update Progress
   function updateProgress() {
     const allTasks = document.querySelectorAll('#todo-list li');
     const doneTasks = document.querySelectorAll('#todo-list li.done');
@@ -53,16 +53,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Theme Toggle
+  // 🌙 Theme Toggle
   modeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     modeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
   });
+
+  // 📅 Set Custom Date Display
+  const now = new Date();
+  const weekday = now.toLocaleDateString('en-US', { weekday: 'long' });
+  const day = now.getDate();
+  const month = now.toLocaleDateString('en-US', { month: 'long' });
+
+  // Inject into DOM
+  document.getElementById('weekday').textContent = weekday;
+  document.getElementById('day-circle').textContent = day;
+  document.getElementById('month-text').textContent = month;
 });
-
-// Show current date
-const dateBox = document.getElementById('date-box');
-const now = new Date();
-const options = { weekday: 'long', day: 'numeric', month: 'long' };
-dateBox.textContent = `📅 ${now.toLocaleDateString('en-US', options)}`;
-
