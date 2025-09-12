@@ -1,11 +1,22 @@
 /* 🌐 Full Page Centering */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cream);
+  font-family: 'Press Start 2P', cursive;
+  color: var(--dark-brown);
+  margin: 0;
+  padding: 0;
+}
+
 .center-container {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   padding: 20px;
-  box-sizing: border-box;
   background-color: var(--cream);
 }
 
@@ -24,15 +35,6 @@ body.dark-mode .center-container {
   --progress-fill: #d2b48c;
 }
 
-body {
-  background-color: var(--cream);
-  font-family: 'Press Start 2P', cursive;
-  color: var(--dark-brown);
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-
 /* 🌙 Theme Toggle */
 .mode-toggle {
   position: fixed;
@@ -43,16 +45,12 @@ body {
   z-index: 10;
 }
 
-.row {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  gap: 20px;
+.wrapper {
   width: 100%;
+  max-width: 800px;
+  padding: 20px;
 }
 
-/* 🍪 Title without border */
 .title-text {
   font-size: 24px;
   color: var(--dark-brown);
@@ -60,7 +58,6 @@ body {
   text-align: center;
 }
 
-/* 📦 Row layout for date and progress */
 .row {
   display: flex;
   justify-content: center;
@@ -71,13 +68,14 @@ body {
   margin-bottom: 20px;
 }
 
-/* 📅 Date Box (stacked layout) */
+/* 📅 Date Box */
 .date-box {
-  background-color: #ffe9c6; 
+  background-color: #ffe9c6;
   border: 3px solid var(--brown);
   border-radius: 12px;
   padding: 15px;
-  width: 180px;
+  width: 100%;
+  max-width: 180px;
   height: 100px;
   box-shadow: 2px 2px 0 var(--brown);
   display: flex;
@@ -104,7 +102,7 @@ body {
 /* 🧁 Progress Box */
 .progress-box {
   flex-grow: 1;
-  min-width: 280px;
+  min-width: 250px;
   background-color: var(--progress-bg);
   border-radius: 12px;
   padding: 15px 20px;
@@ -144,7 +142,6 @@ body {
   display: flex;
   gap: 12px;
   justify-content: center;
-  margin-bottom: 30px;
   flex-wrap: wrap;
   width: 100%;
   max-width: 600px;
@@ -152,9 +149,9 @@ body {
   padding: 15px 20px;
   border-radius: 12px;
   box-shadow: 3px 3px 5px #a67c5266;
+  margin-bottom: 30px;
 }
 
-/* Input fields */
 #new-task,
 #task-time {
   padding: 10px 14px;
@@ -175,7 +172,6 @@ body {
   border-color: var(--dark-brown);
 }
 
-/* Button */
 #add-btn {
   padding: 10px 18px;
   background-color: var(--brown);
@@ -286,4 +282,45 @@ body.dark-mode #add-btn:hover {
 body.dark-mode .todo-box {
   background-color: #2f261f;
   border-color: #d2b48c;
+}
+
+/* 📱 Responsive Adjustments */
+@media (max-width: 600px) {
+  .title-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .date-box,
+  .progress-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .input-section {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px;
+  }
+
+  #new-task,
+  #task-time,
+  #add-btn {
+    width: 100%;
+  }
+
+  ul#todo-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 12px;
+  }
+
+  .task-time {
+    font-size: 10px;
+  }
 }
