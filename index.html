@@ -15,14 +15,18 @@
   <div class="wrapper">
 
     <!-- 🍪 Title -->
-    <div class="title-box">🍪 My To-Do List</div>
+    <div class="title-text">🍪 My To-Do List</div>
 
     <!-- 📦 Top Row: Date + Progress -->
     <div class="row">
-      <!--  Date Box -->
-      <div class="box date-box" id="date-box"></div>
+      <!-- 📅 Date Box -->
+      <div class="box date-box" id="date-box">
+        <div id="weekday"></div>
+        <div id="day-circle"></div>
+        <div id="month-text"></div>
+      </div>
 
-      <!--  Progress Box -->
+      <!-- 🧁 Progress Box -->
       <div class="box progress-box">
         <div class="progress-label">🧁 Progress 🧁</div>
         <div class="progress-container">
@@ -31,7 +35,7 @@
       </div>
     </div>
 
-    <!-- ✍️ Input Section (Separate) -->
+    <!-- ✍️ Input Section -->
     <div class="input-section">
       <input type="text" id="new-task" placeholder="Write your task..." />
       <input type="time" id="task-time" title="Choose time" />
@@ -49,4 +53,3 @@
   <!-- 📜 Scripts -->
   <script src="script.js"></script>
 </body>
-</html>
