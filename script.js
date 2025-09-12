@@ -1,56 +1,60 @@
-// Wait until DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
   const addBtn = document.getElementById('add-btn');
   const newTaskInput = document.getElementById('new-task');
+  const taskTimeInput = document.getElementById('task-time');
   const todoList = document.getElementById('todo-list');
   const progressBar = document.getElementById('progress-bar');
+  const modeToggle = document.getElementById('mode-toggle');
 
-  // Add new task
+  // Add New Task
   addBtn.addEventListener('click', function () {
     const taskText = newTaskInput.value.trim();
+    const taskTime = taskTimeInput.value;
 
     if (taskText !== '') {
       const li = document.createElement('li');
+
       li.innerHTML = `
-        <input type="checkbox" class="task-checkbox"> ${taskText}
+        <span class="task-text">${taskText}</span>
+        ${taskTime ? `<span class="task-time">⏰ ${taskTime}</span>` : ''}
       `;
+
+      li.addEventListener('click', function () {
+        li.classList.toggle('done');
+        updateProgress();
+      });
+
       todoList.appendChild(li);
       newTaskInput.value = '';
+      taskTimeInput.value = '';
 
       updateProgress();
     }
   });
 
-  // Allow "Enter" key to add task too!
+  // Allow Enter to Add
   newTaskInput.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
       addBtn.click();
     }
   });
 
-  // Update progress when checkbox is clicked (event delegation)
-  todoList.addEventListener('change', function (e) {
-    if (e.target.classList.contains('task-checkbox')) {
-      updateProgress();
-    }
-  });
-
-  // Update progress bar
+  // Update Progress
   function updateProgress() {
-    const checkboxes = document.querySelectorAll('.task-checkbox');
-    const total = checkboxes.length;
+    const allTasks = document.querySelectorAll('#todo-list li');
+    const doneTasks = document.querySelectorAll('#todo-list li.done');
 
-    if (total === 0) {
+    if (allTasks.length === 0) {
       progressBar.style.width = '0%';
-      return;
+    } else {
+      const percent = (doneTasks.length / allTasks.length) * 100;
+      progressBar.style.width = percent + '%';
     }
-
-    let checked = 0;
-    checkboxes.forEach(cb => {
-      if (cb.checked) checked++;
-    });
-
-    const percent = (checked / total) * 100;
-    progressBar.style.width = percent + '%';
   }
+
+  // Theme Toggle
+  modeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    modeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+  });
 });
