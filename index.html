@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🍪 To-Do List</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
 <body>
   <div class="mode-toggle" id="mode-toggle">🌙</div>
 
@@ -14,25 +5,25 @@
     <!-- 🍪 Title -->
     <div class="title-box">🍪 My To-Do List</div>
 
-    <!-- Date + Progress -->
-    <div class="top-section">
-      <div class="date-box" id="date-box">📅</div>
-      <div class="progress-section">
+    <!-- Top Row: Date & Progress -->
+    <div class="row">
+      <div class="box date-box" id="date-box">📅</div>
+
+      <div class="box progress-box">
         <div class="progress-label">📈 Progress</div>
         <div class="progress-container">
           <div class="progress-bar" id="progress-bar"></div>
         </div>
+        <!-- Input under progress -->
+        <div class="input-box">
+          <input type="text" id="new-task" placeholder="Write your task..." />
+          <input type="time" id="task-time" title="Choose time" />
+          <button id="add-btn">➕</button>
+        </div>
       </div>
     </div>
 
-    <!-- Input Box -->
-    <div class="input-box">
-      <input type="text" id="new-task" placeholder="Add new task..." />
-      <input type="time" id="task-time" title="Choose time" />
-      <button id="add-btn">➕</button>
-    </div>
-
-    <!-- Task List Box -->
+    <!-- Task List -->
     <div class="todo-box">
       <div class="donut-label">🍩 All Tasks</div>
       <ul id="todo-list"></ul>
