@@ -70,3 +70,21 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('day-circle').textContent = day;
   document.getElementById('month-text').textContent = month;
 });
+
+<script>
+  const titleText = "🍪 My To-Do List 🍪";
+  const titleElement = document.getElementById("typing-title");
+  let index = 0;
+
+  function typeTitle() {
+    if (index < titleText.length) {
+      titleElement.textContent += titleText.charAt(index);
+      index++;
+      setTimeout(typeTitle, 80); // typing speed (ms)
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", typeTitle);
+</script>
+
+
