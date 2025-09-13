@@ -139,14 +139,15 @@ body {
 
 #new-task,
 #task-time {
-  padding: 16px 20px;
+  padding: 14px 18px;
   font-family: 'Press Start 2P', cursive;
   font-size: 12px;
   border: 2px solid #7f4b16;
   border-radius: 10px;
   background-color: #ffffff;
   color: #6e420b;
-  width: 180px;
+  width: 100%;            
+  max-width: 500px;  
   box-shadow: inset 1px 1px 4px #8f867a;
   transition: border-color 0.2s ease;
 }
