@@ -329,3 +329,13 @@ body.dark-mode .todo-box {
     font-size: 10px;
   }
 }
+
+#typing-title::after {
+  content: '|';
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
