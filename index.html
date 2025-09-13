@@ -16,27 +16,25 @@
     <div class="wrapper">
 
       <!-- 🍪 Title -->
-<div class="title-text" id="typing-title"></div>
+      <div class="title-text" id="typing-title"></div>
 
-<!-- 📅 & 🧁 Top Row -->
-<div class="row">
-  <!-- 📅 Date Box -->
-  <div class="box date-box" id="date-box">
-    <div id="weekday"></div>
-    <div id="day-circle"></div>
-    <div id="month-text"></div>
-  </div>
+      <!-- 📅 & 🧁 Top Row -->
+      <div class="row">
+        <!-- 📅 Date Box -->
+        <div class="box date-box" id="date-box">
+          <div id="weekday"></div>
+          <div id="day-circle"></div>
+          <div id="month-text"></div>
+        </div>
 
-  <!-- 🧁 Progress Box -->
-  <div class="box progress-box">
-    <div class="progress-label">🧁 Progress 🧁</div>
-    <div class="progress-container">
-      <div class="progress-bar" id="progress-bar"></div>
-    </div>
-  </div>
-</div>
-
-
+        <!-- 🧁 Progress Box -->
+        <div class="box progress-box">
+          <div class="progress-label">🧁 Progress 🧁</div>
+          <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+        </div>
+      </div>
 
       <!-- ✍️ Input Section -->
       <div class="input-section">
@@ -53,6 +51,24 @@
     </div>
   </div>
 
+  <!-- Existing JS file -->
   <script src="script.js"></script>
+
+  <!-- ✅ Typing Animation Script -->
+  <script>
+    const titleText = "🍪 My To-Do List 🍪";
+    const titleElement = document.getElementById("typing-title");
+    let index = 0;
+
+    function typeTitle() {
+      if (index < titleText.length) {
+        titleElement.textContent += titleText.charAt(index);
+        index++;
+        setTimeout(typeTitle, 80); // Typing speed
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", typeTitle);
+  </script>
 </body>
 </html>
