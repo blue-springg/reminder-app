@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #fffaf0;
+  background-color: #F1D7C5;
   font-family: 'Press Start 2P', cursive;
   color: #695132;
   margin: 0;
@@ -55,8 +55,8 @@ body {
 
 /* 📅 Date Box */
 .date-box {
-  background-color: #b38044;
-  border: 3px solid #895724;
+  background-color: #9B6645;
+  border: 3px solid #361400;
   border-radius: 12px;
   padding: 15px;
   width: 100%;
@@ -73,7 +73,7 @@ body {
 }
 
 #day-circle {
-  background-color: #5f3c19;
+  background-color: #572F17;
   color: #ffffff;
   border-radius: 50%;
   width: 40px;
@@ -88,7 +88,7 @@ body {
 .progress-box {
   flex-grow: 1;
   min-width: 250px;
-  background-color: #e5b786;
+  background-color: #E5B18E;
   border-radius: 12px;
   padding: 15px 20px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
@@ -130,7 +130,7 @@ body {
   flex-wrap: wrap;
   width: 100%;
   max-width: 800px;
-  background-color: #c19253;
+  background-color: #9B6645;
   padding: 15px 20px;
   border-radius: 12px;
   box-shadow: 3px 3px 5px #10080166;
