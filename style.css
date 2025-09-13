@@ -6,7 +6,7 @@
 body {
   background-color: #fffaf0;
   font-family: 'Press Start 2P', cursive;
-  color: #bb9d77;
+  color: #695132;
   margin: 0;
   padding: 0;
 }
@@ -38,7 +38,7 @@ body {
 
 .title-text {
   font-size: 24px;
-  color: #bb9d77;
+  color: #695132;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -55,25 +55,25 @@ body {
 
 /* 📅 Date Box */
 .date-box {
-  background-color: #dda56e;
-  border: 3px solid #af7a44;
+  background-color: #b38044;
+  border: 3px solid #895724;
   border-radius: 12px;
   padding: 15px;
   width: 100%;
   max-width: 180px;
   height: 100px;
-  box-shadow: 2px 2px 0 #af7a44;
+  box-shadow: 2px 2px 0 #5a3a19;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 8px;
   font-size: 12px;
-  color: #bb9d77;
+  color: #ffffff;
 }
 
 #day-circle {
-  background-color: #af7a44;
+  background-color: #5f3c19;
   color: #ffffff;
   border-radius: 50%;
   width: 40px;
@@ -88,7 +88,7 @@ body {
 .progress-box {
   flex-grow: 1;
   min-width: 250px;
-  background-color: #d5ae85;
+  background-color: #e5b786;
   border-radius: 12px;
   padding: 15px 20px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
@@ -102,12 +102,12 @@ body {
 .progress-label {
   font-size: 14px;
   text-align: center;
-  color: #fbe4d8;
+  color: #8f4c28;
 }
 
 .progress-container {
-  background-color: #bb9d77;
-  border: 2px solid #af7a44;
+  background-color: #ffffff;
+  border: 2px solid #7b532b;
   height: 24px;
   border-radius: 15px;
   overflow: hidden;
@@ -130,10 +130,10 @@ body {
   flex-wrap: wrap;
   width: 100%;
   max-width: 600px;
-  background-color: #c1a175;
+  background-color: #c19253;
   padding: 15px 20px;
   border-radius: 12px;
-  box-shadow: 3px 3px 5px #a67c5266;
+  box-shadow: 3px 3px 5px #10080166;
   margin-bottom: 30px;
 }
 
@@ -142,12 +142,12 @@ body {
   padding: 10px 14px;
   font-family: 'Press Start 2P', cursive;
   font-size: 12px;
-  border: 2px solid #af7a44;
+  border: 2px solid #7f4b16;
   border-radius: 10px;
   background-color: #ffffff;
-  color: #bb9d77;
+  color: #6e420b;
   width: 180px;
-  box-shadow: inset 1px 1px 4px #d2b48c;
+  box-shadow: inset 1px 1px 4px #8f867a;
   transition: border-color 0.2s ease;
 }
 
@@ -159,13 +159,13 @@ body {
 
 #add-btn {
   padding: 10px 18px;
-  background-color: #af7a44;
+  background-color: #734415;
   border: none;
   color: #ffffff;
   border-radius: 10px;
   font-size: 14px;
   cursor: pointer;
-  box-shadow: 2px 2px 6px #4e3d28aa;
+  box-shadow: 2px 2px 6px #201200aa;
   transition: background-color 0.3s ease;
 }
 
@@ -176,12 +176,12 @@ body {
 
 /* 📋 Task Box */
 .todo-box {
-  background-color: #fffaf0;
-  border: 3px solid #c1a175;
+  background-color: #ebc47496;
+  border: 3px solid #614827a8;
   border-radius: 15px;
   padding: 20px;
   width: 100%;
-  box-shadow: inset 2px 2px 4px #e0cba8;
+  box-shadow: inset 2px 2px 4px #41382a;
   max-height: 400px;
   overflow-y: auto;
 }
@@ -229,34 +229,34 @@ ul#todo-list li.done {
 
 /* 🌙 Dark Mode Support */
 body.dark-mode {
-  background-color: #1e1a16;
+  background-color: #755e46;
   color: #f5deb3;
 }
 
 body.dark-mode .center-container {
-  background-color: #1e1a16;
+  background-color: #755e46;
 }
 
 body.dark-mode .title-text,
 body.dark-mode .progress-label,
 body.dark-mode .date-box {
-  color: #f5deb3;
+  color: #7b5639;
 }
 
 body.dark-mode .date-box {
-  background-color: #2f261f;
-  border-color: #d2b48c;
+  background-color: #7b5639;
+  border-color: #4b2e09;
 }
 
 body.dark-mode .input-section {
-  background-color: #2f261f;
+  background-color: #936948ba;
 }
 
 body.dark-mode #new-task,
 body.dark-mode #task-time {
-  background-color: #2e231c;
-  color: #f5deb3;
-  border-color: #d2b48c;
+  background-color: #ffffff;
+  color: #5f4516;
+  border-color: #453218;
 }
 
 body.dark-mode #add-btn {
@@ -269,8 +269,8 @@ body.dark-mode #add-btn:hover {
 }
 
 body.dark-mode .todo-box {
-  background-color: #2f261f;
-  border-color: #d2b48c;
+  background-color: #573d2a;
+  border-color: #33210a;
 }
 
 /* 📱 Responsive Adjustments */
