@@ -51,43 +51,26 @@
     </div>
   </div>
 
-  <!-- Existing JS file -->
-  <script src="script.js"></script>
-
-  <!-- ✅ Typing Animation Script -->
+  <!-- ✅ Typing Animation -->
   <script>
-    const titleText = "🍪 My To-Do List 🍪";
-    const titleElement = document.getElementById("typing-title");
-    let index = 0;
+    document.addEventListener("DOMContentLoaded", function () {
+      const titleText = "🍪 My To-Do List 🍪";
+      const titleElement = document.getElementById("typing-title");
+      let index = 0;
 
-    function typeTitle() {
-      if (index < titleText.length) {
-        titleElement.textContent += titleText.charAt(index);
-        index++;
-        setTimeout(typeTitle, 80); // Typing speed
+      function typeTitle() {
+        if (index < titleText.length) {
+          titleElement.textContent += titleText.charAt(index);
+          index++;
+          setTimeout(typeTitle, 80);
+        }
       }
-    }
 
-    document.addEventListener("DOMContentLoaded", typeTitle);
+      typeTitle();
+    });
   </script>
+
+  <!-- ✅ Main App Script -->
+  <script src="script.js"></script>
 </body>
 </html>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Dark Mode Toggle
-    const modeToggle = document.getElementById('mode-toggle');
-    modeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      modeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-    });
-
-    // Set Date in Date Box
-    const now = new Date();
-    document.getElementById('weekday').textContent = now.toLocaleDateString('en-US', { weekday: 'long' });
-    document.getElementById('day-circle').textContent = now.getDate();
-    document.getElementById('month-text').textContent = now.toLocaleDateString('en-US', { month: 'long' });
-  });
-</script>
-
-
