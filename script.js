@@ -83,6 +83,15 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(typeTitle, 80); // typing speed (ms)
     }
   }
+document.addEventListener('DOMContentLoaded', function () {
+  const modeToggle = document.getElementById('mode-toggle');
+
+  modeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    modeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+  });
+});
+
 
   window.addEventListener("DOMContentLoaded", typeTitle);
 </script>
