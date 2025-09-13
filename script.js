@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const modeToggle = document.getElementById('mode-toggle');
 
   // 🧁 Add New Task
-  addBtn.addEventListener('click', function () {
+  function addTask() {
     const taskText = newTaskInput.value.trim();
     const taskTime = taskTimeInput.value;
 
@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
         ${taskTime ? `<span class="task-time">⏰ ${taskTime}</span>` : ''}
       `;
 
-      // Toggle task done
       li.addEventListener('click', function () {
         li.classList.toggle('done');
         updateProgress();
@@ -31,69 +30,32 @@ document.addEventListener('DOMContentLoaded', function () {
       taskTimeInput.value = '';
       updateProgress();
     }
-  });
+  }
 
-  // 🧁 Allow Enter key to add task
+  addBtn.addEventListener('click', addTask);
   newTaskInput.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
-      addBtn.click();
+      addTask();
     }
   });
 
-  // 📊 Update Progress
+  // 📊 Update Progress Bar
   function updateProgress() {
     const allTasks = document.querySelectorAll('#todo-list li');
     const doneTasks = document.querySelectorAll('#todo-list li.done');
-
-    if (allTasks.length === 0) {
-      progressBar.style.width = '0%';
-    } else {
-      const percent = (doneTasks.length / allTasks.length) * 100;
-      progressBar.style.width = percent + '%';
-    }
+    const percent = allTasks.length > 0 ? (doneTasks.length / allTasks.length) * 100 : 0;
+    progressBar.style.width = percent + '%';
   }
 
-  // 🌙 Theme Toggle
+  // 🌙 Toggle Dark Mode
   modeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     modeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
   });
 
-  // 📅 Set Custom Date Display
+  // 📅 Update Date Info
   const now = new Date();
-  const weekday = now.toLocaleDateString('en-US', { weekday: 'long' });
-  const day = now.getDate();
-  const month = now.toLocaleDateString('en-US', { month: 'long' });
-
-  // Inject into DOM
-  document.getElementById('weekday').textContent = weekday;
-  document.getElementById('day-circle').textContent = day;
-  document.getElementById('month-text').textContent = month;
+  document.getElementById('weekday').textContent = now.toLocaleDateString('en-US', { weekday: 'long' });
+  document.getElementById('day-circle').textContent = now.getDate();
+  document.getElementById('month-text').textContent = now.toLocaleDateString('en-US', { month: 'long' });
 });
-
-<script>
-  const titleText = "🍪 My To-Do List 🍪";
-  const titleElement = document.getElementById("typing-title");
-  let index = 0;
-
-  function typeTitle() {
-    if (index < titleText.length) {
-      titleElement.textContent += titleText.charAt(index);
-      index++;
-      setTimeout(typeTitle, 80); // typing speed (ms)
-    }
-  }
-document.addEventListener('DOMContentLoaded', function () {
-  const modeToggle = document.getElementById('mode-toggle');
-
-  modeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    modeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-  });
-});
-
-
-  window.addEventListener("DOMContentLoaded", typeTitle);
-</script>
-
-
