@@ -137,7 +137,22 @@ body {
   margin-bottom: 30px;
 }
 
-#new-task,
+/* Longer task input */
+#new-task {
+  padding: 14px 18px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  border: 2px solid #7f4b16;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #6e420b;
+  width: 100%;               /* Full width of container */
+  max-width: 500px;          /* Limit length on big screens */
+  box-shadow: inset 1px 1px 4px #8f867a;
+  transition: border-color 0.2s ease;
+}
+
+/* Smaller time input */
 #task-time {
   padding: 14px 18px;
   font-family: 'Press Start 2P', cursive;
@@ -146,11 +161,11 @@ body {
   border-radius: 10px;
   background-color: #ffffff;
   color: #6e420b;
-  width: 100%;            
-  max-width: 500px;  
+  width: 130px;              /* Smaller fixed width */
   box-shadow: inset 1px 1px 4px #8f867a;
   transition: border-color 0.2s ease;
 }
+
 
 #new-task:focus,
 #task-time:focus {
