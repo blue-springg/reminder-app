@@ -55,7 +55,7 @@ body {
 
 /* 📅 Date Box */
 .date-box {
-  background-color: #BB8588;
+  background-color: #CC8B86;
   border: 3px solid #461220;
   border-radius: 12px;
   padding: 15px;
@@ -73,7 +73,7 @@ body {
 }
 
 #day-circle {
-  background-color: #572F17;
+  background-color: #7D4F50;
   color: #ffffff;
   border-radius: 50%;
   width: 40px;
