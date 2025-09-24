@@ -38,14 +38,18 @@
 
       <!-- Input Section -->
       <div class="input-section">
-        <input type="text" id="new-task" placeholder="Write a task... ☕" class="text-sm" />
-        <select id="task-category" class="text-sm">
-          <option value="Personal">Personal</option>
-          <option value="Work">Work</option>
-          <option value="Urgent">Urgent</option>
-        </select>
-        <input type="time" id="task-time" title="Choose time" class="text-sm" />
-        <button id="add-btn" class="text-sm">➕ Add</button>
+        <div class="input-row">
+          <input type="text" id="new-task" placeholder="Write a task... ☕" class="text-sm" />
+          <select id="task-category" class="text-sm">
+            <option value="Personal">Personal</option>
+            <option value="Work">Work</option>
+            <option value="Urgent">Urgent</option>
+          </select>
+        </div>
+        <div class="input-row">
+          <input type="time" id="task-time" title="Choose time" class="text-sm" />
+          <button id="add-btn" class="text-sm">➕</button>
+        </div>
       </div>
 
       <!-- Task List -->
