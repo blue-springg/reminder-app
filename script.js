@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     filteredTasks.forEach((task, index) => {
       const li = document.createElement('li');
       li.className = task.done ? 'done' : '';
-      li.setAttribute('tabindex', '0'); // Make tasks focusable
+      li.setAttribute('tabindex', '0');
       li.innerHTML = `
         <span class="task-donut">☕</span>
         <span class="task-text">${task.text}</span>
@@ -184,6 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('month-text').textContent = now.toLocaleDateString('en-US', { month: 'long' });
 
   // Initial Render
-  filterButtons[0].classList.add('active'); // Set "All" as default
+  filterButtons[0].classList.add('active');
   renderTasks();
 });
