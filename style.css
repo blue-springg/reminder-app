@@ -185,7 +185,7 @@ body.dark .progress-percent {
 /* Input Section */
 .input-section {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 0.75rem;
   background-color: #f5e8c7; /* Creamy beige */
   padding: 1.5rem;
@@ -198,11 +198,17 @@ body.dark .input-section {
   background-color: #4b5563; /* Gray */
 }
 
+.input-row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
 #new-task, #task-time, #task-category, #add-btn {
-  padding: 0.875rem; /* Slightly smaller for mobile balance */
+  padding: 0.875rem;
   border-radius: 0.75rem;
   font-family: 'Press Start 2P', cursive;
-  font-size: 0.875rem; /* Consistent font size */
+  font-size: 0.875rem;
 }
 
 #new-task, #task-category, #task-time {
@@ -213,40 +219,37 @@ body.dark .input-section {
 
 #new-task {
   flex: 1;
-  min-width: 100%; /* Full width on mobile */
+  min-width: 12rem;
 }
 
-#task-category, #task-time {
-  width: 100%; /* Equal width for consistency */
-  max-width: 10rem; /* Balanced size */
+#task-category {
+  width: 10rem;
 }
 
-body.dark #new-task, body.dark #task-time, body.dark #task-category {
-  background-color: #4b5563;
-  border-color: #f5e8c7;
-  color: #f5e8c7;
-}
-
-#new-task:focus, #task-time:focus, #task-category:focus {
-  outline: none;
-  border-color: #8b6f47; /* Medium brown */
+#task-time {
+  width: 8rem;
 }
 
 #add-btn {
-  padding: 0.875rem 1.25rem;
+  padding: 0.875rem; /* Smaller padding */
+  width: 4rem; /* Smaller width for desktop */
   background-color: #6b4e31; /* Warm brown */
   border: none;
   color: #ffffff;
   cursor: pointer;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease, transform 0.2s ease;
-  width: 100%; /* Full width on mobile */
-  max-width: 10rem; /* Balanced size */
 }
 
 #add-btn:hover {
   background-color: #8b6f47; /* Medium brown */
   transform: scale(1.05);
+}
+
+body.dark #new-task, body.dark #task-time, body.dark #task-category {
+  background-color: #4b5563;
+  border-color: #f5e8c7;
+  color: #f5e8c7;
 }
 
 body.dark #add-btn {
@@ -256,6 +259,11 @@ body.dark #add-btn {
 
 body.dark #add-btn:hover {
   background-color: #d7ccc8;
+}
+
+#new-task:focus, #task-time:focus, #task-category:focus {
+  outline: none;
+  border-color: #8b6f47; /* Medium brown */
 }
 
 /* Task Box */
@@ -397,9 +405,24 @@ body.dark .delete-btn:hover {
     align-items: stretch;
   }
 
+  .input-row {
+    flex-direction: column;
+  }
+
   #new-task, #task-category, #task-time, #add-btn {
     width: 100%;
-    max-width: none; /* Remove max-width on mobile for full-width inputs */
-    font-size: 0.75rem; /* Slightly smaller for mobile */
+    max-width: none;
+    font-size: 0.75rem;
+  }
+
+  #add-btn {
+    width: 100%;
+    padding: 0.875rem;
+  }
+}
+
+@media (min-width: 601px) {
+  .input-row:nth-child(2) {
+    justify-content: flex-start;
   }
 }
