@@ -93,6 +93,7 @@ body.dark .header-row {
 
 /* Date Box */
 .date-box {
+  font-family: 'Press Start 2P', cursive; /* Retro font for date */
   flex: 1;
   min-width: 8rem;
   max-width: 10rem;
