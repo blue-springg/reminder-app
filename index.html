@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-pink-100 dark:bg-gray-800">
+<body class="bg-gradient-to-br from-pink-100 to-purple-100 dark:from-gray-800 dark:to-gray-900">
   <div class="center-container">
     <!-- Theme Toggle -->
     <button class="mode-toggle" id="mode-toggle" aria-label="Toggle dark mode">🌙</button>
@@ -17,35 +17,46 @@
       <!-- Title -->
       <h1 class="title-text" id="typing-title"></h1>
 
-      <!-- Date & Progress Row -->
-      <div class="row">
-        <!-- Date Box -->
-        <div class="box date-box" id="date-box">
-          <div id="weekday" class="text-xs sm:text-sm"></div>
-          <div id="day-circle" class="day-circle"></div>
-          <div id="month-text" class="text-xs sm:text-sm"></div>
-        </div>
+      <!-- Main Content -->
+      <div class="main-content">
+        <!-- Left Column: Date & Progress -->
+        <div class="left-column">
+          <!-- Date Box -->
+          <div class="box date-box" id="date-box">
+            <div id="weekday" class="text-sm"></div>
+            <div id="day-circle" class="day-circle"></div>
+            <div id="month-text" class="text-sm"></div>
+          </div>
 
-        <!-- Progress Box -->
-        <div class="box progress-box">
-          <div class="progress-label text-xs sm:text-sm">🧁 Progress</div>
-          <div class="progress-container">
-            <div class="progress-bar" id="progress-bar"></div>
+          <!-- Progress Box -->
+          <div class="box progress-box">
+            <div class="progress-label text-sm">🧁 Progress</div>
+            <div class="progress-container">
+              <div class="progress-bar" id="progress-bar"></div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Input Section -->
-      <div class="input-section">
-        <input type="text" id="new-task" placeholder="Write a task... 🍩" class="text-xs sm:text-sm" />
-        <input type="time" id="task-time" title="Choose time" class="text-xs sm:text-sm" />
-        <button id="add-btn" class="text-xs sm:text-sm">➕ Add</button>
-      </div>
+        <!-- Right Column: Input & Tasks -->
+        <div class="right-column">
+          <!-- Input Section -->
+          <div class="input-section">
+            <input type="text" id="new-task" placeholder="Write a task... 🍩" class="text-sm" />
+            <select id="task-category" class="text-sm">
+              <option value="Personal">Personal</option>
+              <option value="Work">Work</option>
+              <option value="Urgent">Urgent</option>
+            </select>
+            <input type="time" id="task-time" title="Choose time" class="text-sm" />
+            <button id="add-btn" class="text-sm">➕ Add</button>
+          </div>
 
-      <!-- Task List -->
-      <div class="todo-box">
-        <div class="donut-label text-xs sm:text-sm">🍩 All Tasks</div>
-        <ul id="todo-list"></ul>
+          <!-- Task List -->
+          <div class="todo-box">
+            <div class="donut-label text-sm">🍩 All Tasks</div>
+            <ul id="todo-list"></ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
