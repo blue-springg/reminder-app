@@ -17,16 +17,13 @@
       <!-- Title -->
       <h1 class="title-text" id="typing-title"></h1>
 
-      <!-- Top Row: Date & Progress -->
-      <div class="top-row">
-        <!-- Date Box -->
+      <!-- Header: Date & Progress -->
+      <div class="header-row">
         <div class="box date-box" id="date-box">
           <div id="weekday" class="text-xs"></div>
           <div id="day-circle" class="day-circle"></div>
           <div id="month-text" class="text-xs"></div>
         </div>
-
-        <!-- Progress Box -->
         <div class="box progress-box">
           <div class="progress-label text-xs">🥐 Progress</div>
           <div class="progress-container">
@@ -38,25 +35,23 @@
 
       <!-- Input Section -->
       <div class="input-section">
+        <input type="text" id="new-task" placeholder="Write a task... ☕" class="text-sm" aria-label="New task input" />
         <div class="input-row">
-          <input type="text" id="new-task" placeholder="Write a task... ☕" class="text-sm" aria-label="New task input" />
-          <select id="task-category" class="text-sm" aria-label="Task category">
+          <select id="task-category" class="text-xs" aria-label="Task category">
             <option value="Personal">Personal</option>
             <option value="Work">Work</option>
             <option value="Urgent">Urgent</option>
           </select>
+          <input type="time" id="task-time" title="Choose time" class="text-xs" aria-label="Task time" />
+          <button id="add-btn" class="text-xs">➕</button>
         </div>
-        <div class="input-row">
-          <input type="time" id="task-time" title="Choose time" class="text-sm" aria-label="Task time" />
-          <button id="add-btn" class="text-sm">➕</button>
-        </div>
-        <div class="error-message" id="error-message" role="alert"></div>
+        <div class="error-message text-xs" id="error-message" role="alert"></div>
       </div>
 
       <!-- Task List -->
       <div class="todo-box">
         <div class="todo-header">
-          <div class="donut-label text-sm">🧋 All Tasks</div>
+          <div class="donut-label text-sm">🧋 Tasks</div>
           <div class="task-count text-xs" id="task-count">0 tasks (0 done)</div>
           <button class="clear-btn text-xs" id="clear-btn">Clear All</button>
         </div>
