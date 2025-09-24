@@ -6,13 +6,13 @@
 
 body {
   font-family: 'Press Start 2P', cursive;
-  color: #4a2c2a; /* Dark brown */
+  color: #3c2f2f; /* Espresso brown */
   transition: all 0.3s ease;
   min-height: 100vh;
 }
 
 body.dark {
-  color: #f5e0d3; /* Light beige */
+  color: #f5e8c7; /* Creamy beige */
 }
 
 .center-container {
@@ -25,15 +25,15 @@ body.dark {
 
 .wrapper {
   width: 100%;
-  max-width: 32rem; /* Compact for single-column layout */
+  max-width: 32rem;
   padding: 2rem;
-  background-color: #fff1f2; /* Light pink */
+  background-color: #fffaf0; /* Soft white */
   border-radius: 1.5rem;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 body.dark .wrapper {
-  background-color: #374151; /* Dark gray */
+  background-color: #2d3748; /* Dark gray */
 }
 
 /* Theme Toggle */
@@ -56,13 +56,13 @@ body.dark .wrapper {
 .title-text {
   font-size: 1.5rem;
   text-align: center;
-  color: #be185d; /* Pinkish-red */
+  color: #6b4e31; /* Warm brown */
   margin-bottom: 2rem;
   position: relative;
 }
 
 body.dark .title-text {
-  color: #f9a8d4; /* Lighter pink */
+  color: #f5e8c7; /* Creamy beige */
 }
 
 .title-text::after {
@@ -87,9 +87,9 @@ body.dark .title-text {
 .date-box {
   flex: 1;
   min-width: 8rem;
-  max-width: 10rem; /* Smaller size */
-  background-color: #fecdd3; /* Light red */
-  border: 3px solid #be185d; /* Pinkish-red */
+  max-width: 10rem;
+  background-color: #d7ccc8; /* Light coffee brown */
+  border: 3px solid #6b4e31; /* Warm brown */
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
@@ -101,15 +101,15 @@ body.dark .title-text {
 }
 
 body.dark .date-box {
-  background-color: #9f1239; /* Darker red */
-  border-color: #f43f5e; /* Brighter pink */
+  background-color: #4a3728; /* Darker coffee */
+  border-color: #8b6f47; /* Lighter brown */
 }
 
 .day-circle {
-  background-color: #f9a8d4; /* Light pink */
-  color: #4a2c2a;
+  background-color: #f5e8c7; /* Creamy beige */
+  color: #3c2f2f;
   border-radius: 50%;
-  width: 2.5rem; /* Smaller circle */
+  width: 2.5rem;
   height: 2.5rem;
   display: flex;
   align-items: center;
@@ -119,15 +119,15 @@ body.dark .date-box {
 }
 
 body.dark .day-circle {
-  background-color: #d81b60; /* Darker pink */
-  color: #f5e0d3;
+  background-color: #8b6f47; /* Medium brown */
+  color: #f5e8c7;
 }
 
 /* Progress Box */
 .progress-box {
   flex: 2;
   min-width: 12rem;
-  background-color: #fef9c3; /* Light yellow */
+  background-color: #efebe9; /* Light beige */
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
@@ -137,49 +137,49 @@ body.dark .day-circle {
 }
 
 body.dark .progress-box {
-  background-color: #ca8a04; /* Darker yellow */
+  background-color: #4a3728; /* Darker coffee */
 }
 
 .progress-label {
   text-align: center;
-  color: #854d0e; /* Dark yellow */
+  color: #6b4e31; /* Warm brown */
 }
 
 body.dark .progress-label {
-  color: #fef9c3; /* Light yellow */
+  color: #f5e8c7; /* Creamy beige */
 }
 
 .progress-container {
   background-color: #ffffff;
-  border: 2px solid #ca8a04;
+  border: 2px solid #6b4e31;
   height: 1.5rem;
   border-radius: 1rem;
   overflow: hidden;
 }
 
 body.dark .progress-container {
-  background-color: #6b7280;
-  border-color: #fef9c3;
+  background-color: #4b5563;
+  border-color: #f5e8c7;
 }
 
 .progress-bar {
-  background-color: #facc15; /* Bright yellow */
+  background-color: #8b6f47; /* Medium brown */
   height: 100%;
   width: 0;
   transition: width 0.4s ease-in-out;
 }
 
 body.dark .progress-bar {
-  background-color: #fef9c3;
+  background-color: #f5e8c7;
 }
 
 .progress-percent {
   text-align: center;
-  color: #854d0e;
+  color: #6b4e31;
 }
 
 body.dark .progress-percent {
-  color: #fef9c3;
+  color: #f5e8c7;
 }
 
 /* Input Section */
@@ -187,7 +187,7 @@ body.dark .progress-percent {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  background-color: #fbcfe8; /* Light pink */
+  background-color: #f5e8c7; /* Creamy beige */
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
@@ -199,44 +199,44 @@ body.dark .input-section {
 }
 
 #new-task, #task-time, #task-category, #add-btn {
-  padding: 1rem; /* Larger padding for bigger inputs */
+  padding: 1rem;
   border-radius: 0.75rem;
   font-family: 'Press Start 2P', cursive;
 }
 
 #new-task, #task-category, #task-time {
-  border: 2px solid #db2777; /* Pink */
+  border: 2px solid #6b4e31; /* Warm brown */
   background-color: #ffffff;
-  color: #4a2c2a;
+  color: #3c2f2f;
 }
 
 #new-task {
   flex: 1;
-  min-width: 12rem; /* Larger input */
+  min-width: 12rem;
 }
 
 #task-category {
-  width: 10rem; /* Larger dropdown */
+  width: 10rem;
 }
 
 #task-time {
-  width: 10rem; /* Larger time input */
+  width: 10rem;
 }
 
 body.dark #new-task, body.dark #task-time, body.dark #task-category {
   background-color: #4b5563;
-  border-color: #f9a8d4;
-  color: #f5e0d3;
+  border-color: #f5e8c7;
+  color: #f5e8c7;
 }
 
 #new-task:focus, #task-time:focus, #task-category:focus {
   outline: none;
-  border-color: #f472b6; /* Lighter pink */
+  border-color: #8b6f47; /* Medium brown */
 }
 
 #add-btn {
-  padding: 1rem 1.5rem; /* Larger button */
-  background-color: #db2777; /* Pink */
+  padding: 1rem 1.5rem;
+  background-color: #6b4e31; /* Warm brown */
   border: none;
   color: #ffffff;
   cursor: pointer;
@@ -245,22 +245,23 @@ body.dark #new-task, body.dark #task-time, body.dark #task-category {
 }
 
 #add-btn:hover {
-  background-color: #f472b6; /* Lighter pink */
+  background-color: #8b6f47; /* Medium brown */
   transform: scale(1.05);
 }
 
 body.dark #add-btn {
-  background-color: #f9a8d4;
+  background-color: #f5e8c7;
+  color: #3c2f2f;
 }
 
 body.dark #add-btn:hover {
-  background-color: #f472b6;
+  background-color: #d7ccc8;
 }
 
 /* Task Box */
 .todo-box {
-  background-color: #e9d5ff; /* Light purple */
-  border: 3px solid #7e22ce; /* Purple */
+  background-color: #d7ccc8; /* Light coffee brown */
+  border: 3px solid #6b4e31; /* Warm brown */
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
@@ -269,17 +270,17 @@ body.dark #add-btn:hover {
 }
 
 body.dark .todo-box {
-  background-color: #6b21a8; /* Darker purple */
-  border-color: #c084fc; /* Lighter purple */
+  background-color: #4a3728; /* Darker coffee */
+  border-color: #f5e8c7; /* Creamy beige */
 }
 
 .donut-label {
-  color: #7e22ce;
+  color: #6b4e31;
   margin-bottom: 0.75rem;
 }
 
 body.dark .donut-label {
-  color: #c084fc;
+  color: #f5e8c7;
 }
 
 #todo-list {
@@ -288,7 +289,7 @@ body.dark .donut-label {
 
 #todo-list li {
   background: #ffffff;
-  border: 1px solid #d8b4fe; /* Light purple */
+  border: 1px solid #bcaaa4; /* Light brown */
   padding: 1rem;
   border-radius: 0.75rem;
   margin: 0.5rem 0;
@@ -302,7 +303,7 @@ body.dark .donut-label {
 
 body.dark #todo-list li {
   background: #4b5563;
-  border-color: #c084fc;
+  border-color: #f5e8c7;
 }
 
 #todo-list li.done {
@@ -326,45 +327,45 @@ body.dark #todo-list li.done {
 
 .task-category {
   font-size: 0.75rem;
-  color: #be185d;
-  background-color: #fce7f3;
+  color: #6b4e31;
+  background-color: #efebe9;
   padding: 0.25rem 0.75rem;
   border-radius: 0.5rem;
 }
 
 body.dark .task-category {
-  color: #f9a8d4;
+  color: #f5e8c7;
   background-color: #4b5563;
 }
 
 .task-time {
   font-size: 0.75rem;
-  color: #854d0e; /* Yellow-brown */
+  color: #6b4e31;
 }
 
 body.dark .task-time {
-  color: #fef9c3;
+  color: #f5e8c7;
 }
 
 .delete-btn {
   background: none;
   border: none;
-  color: #be185d;
+  color: #6b4e31;
   font-size: 0.875rem;
   cursor: pointer;
   transition: color 0.2s ease;
 }
 
 .delete-btn:hover {
-  color: #db2777;
+  color: #8b6f47;
 }
 
 body.dark .delete-btn {
-  color: #f9a8d4;
+  color: #f5e8c7;
 }
 
 body.dark .delete-btn:hover {
-  color: #f472b6;
+  color: #d7ccc8;
 }
 
 /* Animations */
