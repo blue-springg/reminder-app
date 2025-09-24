@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    updateProgress(); // Ensure progress is updated after rendering
+    updateProgress();
   }
 
   // Save Tasks to Local Storage
