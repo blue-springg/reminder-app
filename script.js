@@ -5,13 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const taskCategorySelect = document.getElementById('task-category');
   const todoList = document.getElementById('todo-list');
   const progressBar = document.getElementById('progress-bar');
+  const progressPercent = document.getElementById('progress-percent');
   const modeToggle = document.getElementById('mode-toggle');
 
   // Load tasks from local storage
   let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
   // Typing Animation
-  const titleText = "🍪 To-Do List 🍪";
+  const titleText = "☕ Coffee To-Do ☕";
   const titleElement = document.getElementById('typing-title');
   let index = 0;
 
@@ -31,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const li = document.createElement('li');
       li.className = task.done ? 'done' : '';
       li.innerHTML = `
-        <span class="task-donut">🍩</span>
+        <span class="task-donut">☕</span>
         <span class="task-text">${task.text}</span>
         <span class="task-category">${task.category}</span>
         ${task.time ? `<span class="task-time">⏰ ${task.time}</span>` : ''}
@@ -42,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         tasks[index].done = !tasks[index].done;
         saveTasks();
         renderTasks();
-        updateProgress();
       });
       todoList.appendChild(li);
     });
@@ -54,9 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
         tasks.splice(index, 1);
         saveTasks();
         renderTasks();
-        updateProgress();
       });
     });
+
+    updateProgress(); // Ensure progress is updated after rendering
   }
 
   // Save Tasks to Local Storage
@@ -77,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
       taskTimeInput.value = '';
       taskCategorySelect.value = 'Personal';
       renderTasks();
-      updateProgress();
     }
   }
 
@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const doneTasks = tasks.filter(task => task.done).length;
     const percent = tasks.length > 0 ? (doneTasks / tasks.length) * 100 : 0;
     progressBar.style.width = `${percent}%`;
+    progressPercent.textContent = `${Math.round(percent)}%`;
   }
 
   // Toggle Dark Mode
@@ -107,5 +108,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initial Render
   renderTasks();
-  updateProgress();
 });
