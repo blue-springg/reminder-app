@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Roboto', sans-serif; /* Default font for body text */
   color: #3c2f2f; /* Espresso brown */
   transition: all 0.3s ease;
   min-height: 100vh;
@@ -56,6 +56,7 @@ body.dark .wrapper {
 
 /* Title */
 .title-text {
+  font-family: 'Press Start 2P', cursive; /* Retro font for title */
   font-size: 1.25rem;
   text-align: center;
   color: #6b4e31; /* Warm brown */
@@ -128,6 +129,10 @@ body.dark .day-circle {
   color: #f5e8c7;
 }
 
+.text-sm {
+  font-size: 0.75rem;
+}
+
 /* Progress Box */
 .progress-box {
   flex: 2;
@@ -145,6 +150,7 @@ body.dark .progress-box {
 }
 
 .progress-label {
+  font-family: 'Press Start 2P', cursive; /* Retro font for label */
   text-align: center;
   color: #6b4e31; /* Warm brown */
 }
@@ -212,7 +218,7 @@ body.dark .input-section {
 #new-task, #task-time, #task-category, #add-btn {
   padding: 0.75rem;
   border-radius: 0.5rem;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Roboto', sans-serif; /* Modern font for inputs */
   font-size: 0.875rem;
 }
 
@@ -314,6 +320,7 @@ body.dark .todo-box {
 }
 
 .donut-label {
+  font-family: 'Press Start 2P', cursive; /* Retro font for label */
   color: #6b4e31;
 }
 
@@ -429,7 +436,7 @@ body.dark #todo-list li.done {
 }
 
 .task-category {
-  font-size: 0.625rem;
+  font-size: 0.75rem; /* Slightly larger for readability */
   color: #6b4e31;
   background-color: #efebe9;
   padding: 0.2rem 0.5rem;
@@ -442,7 +449,7 @@ body.dark .task-category {
 }
 
 .task-time {
-  font-size: 0.625rem;
+  font-size: 0.75rem; /* Slightly larger for readability */
   color: #6b4e31;
 }
 
@@ -529,6 +536,10 @@ body.dark .delete-btn:hover {
     flex: 1;
     min-width: 4rem;
     padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .text-sm, .task-count, .clear-btn {
     font-size: 0.75rem;
   }
 }
