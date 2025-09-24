@@ -3,74 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>🍪 My To-Do List 🍪</title>
+  <title>🍪 To-Do List 🍪</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="bg-pink-100 dark:bg-gray-800">
   <div class="center-container">
-    <!-- 🌙 Theme Toggle -->
-    <div class="mode-toggle" id="mode-toggle">🌙</div>
+    <!-- Theme Toggle -->
+    <button class="mode-toggle" id="mode-toggle" aria-label="Toggle dark mode">🌙</button>
 
-    <!-- 🧁 Main Wrapper -->
+    <!-- Main Wrapper -->
     <div class="wrapper">
+      <!-- Title -->
+      <h1 class="title-text" id="typing-title"></h1>
 
-      <!-- 🍪 Title -->
-      <div class="title-text" id="typing-title"></div>
-
-      <!-- 📅 & 🧁 Top Row -->
+      <!-- Date & Progress Row -->
       <div class="row">
-        <!-- 📅 Date Box -->
+        <!-- Date Box -->
         <div class="box date-box" id="date-box">
-          <div id="weekday"></div>
-          <div id="day-circle"></div>
-          <div id="month-text"></div>
+          <div id="weekday" class="text-xs sm:text-sm"></div>
+          <div id="day-circle" class="day-circle"></div>
+          <div id="month-text" class="text-xs sm:text-sm"></div>
         </div>
 
-        <!-- 🧁 Progress Box -->
+        <!-- Progress Box -->
         <div class="box progress-box">
-          <div class="progress-label">🧁 Progress 🧁</div>
+          <div class="progress-label text-xs sm:text-sm">🧁 Progress</div>
           <div class="progress-container">
             <div class="progress-bar" id="progress-bar"></div>
           </div>
         </div>
       </div>
 
-      <!-- ✍️ Input Section -->
+      <!-- Input Section -->
       <div class="input-section">
-        <input type="text" id="new-task" placeholder="Write your task..." />
-        <input type="time" id="task-time" title="Choose time" />
-        <button id="add-btn">➕</button>
+        <input type="text" id="new-task" placeholder="Write a task... 🍩" class="text-xs sm:text-sm" />
+        <input type="time" id="task-time" title="Choose time" class="text-xs sm:text-sm" />
+        <button id="add-btn" class="text-xs sm:text-sm">➕ Add</button>
       </div>
 
-      <!-- 📋 Task List -->
+      <!-- Task List -->
       <div class="todo-box">
-        <div class="donut-label">🍩 All Tasks</div>
+        <div class="donut-label text-xs sm:text-sm">🍩 All Tasks</div>
         <ul id="todo-list"></ul>
       </div>
     </div>
   </div>
-
-  <!-- ✅ Typing Animation -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const titleText = "🍪 My To-Do List 🍪";
-      const titleElement = document.getElementById("typing-title");
-      let index = 0;
-
-      function typeTitle() {
-        if (index < titleText.length) {
-          titleElement.textContent += titleText.charAt(index);
-          index++;
-          setTimeout(typeTitle, 80);
-        }
-      }
-
-      typeTitle();
-    });
-  </script>
-
-  <!-- ✅ Main App Script -->
   <script src="script.js"></script>
 </body>
 </html>
