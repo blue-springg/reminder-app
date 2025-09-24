@@ -25,7 +25,7 @@ body.dark {
 
 .wrapper {
   width: 100%;
-  max-width: 36rem; /* Slightly wider for balance */
+  max-width: 36rem;
   padding: 1.5rem;
   background-color: #fffaf0; /* Soft white */
   border-radius: 1rem;
@@ -93,17 +93,17 @@ body.dark .header-row {
 /* Date Box */
 .date-box {
   flex: 1;
-  min-width: 7rem;
-  max-width: 8rem; /* Smaller for compactness */
+  min-width: 8rem;
+  max-width: 10rem;
   background-color: #d7ccc8; /* Light coffee brown */
   border: 2px solid #6b4e31; /* Warm brown */
   border-radius: 0.75rem;
-  padding: 0.75rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 
 body.dark .date-box {
@@ -115,12 +115,12 @@ body.dark .date-box {
   background-color: #f5e8c7; /* Creamy beige */
   color: #3c2f2f;
   border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 body.dark .day-circle {
@@ -210,10 +210,10 @@ body.dark .input-section {
 }
 
 #new-task, #task-time, #task-category, #add-btn {
-  padding: 0.5rem;
+  padding: 0.75rem;
   border-radius: 0.5rem;
   font-family: 'Press Start 2P', cursive;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 #new-task {
@@ -224,10 +224,22 @@ body.dark .input-section {
 }
 
 #task-category, #task-time {
-  width: 6rem;
+  width: 7rem;
   border: 1px solid #6b4e31;
   background-color: #ffffff;
   color: #3c2f2f;
+}
+
+#task-category {
+  appearance: none;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"%3E%3Cpath fill="%236b4e31" d="M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z"/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 0.75rem;
+}
+
+body.dark #task-category {
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"%3E%3Cpath fill="%23f5e8c7" d="M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z"/%3E%3C/svg%3E');
 }
 
 #add-btn {
@@ -380,7 +392,7 @@ body.dark .filter-btn.active, body.dark .filter-btn:hover {
 
 #todo-list li {
   background: #ffffff;
-  border: 1px solid #d7ccc8; /* Lighter for less noise */
+  border: 1px solid #d7ccc8;
   padding: 0.75rem;
   border-radius: 0.5rem;
   margin: 0.5rem 0;
@@ -486,7 +498,11 @@ body.dark .delete-btn:hover {
   }
 
   .date-box, .progress-box {
-    min-width: 7rem;
+    min-width: 8rem;
+  }
+
+  .date-box {
+    max-width: 10rem;
   }
 
   .input-row {
@@ -496,7 +512,8 @@ body.dark .delete-btn:hover {
   #new-task, #task-category, #task-time, #add-btn {
     width: 100%;
     max-width: none;
-    font-size: 0.625rem;
+    font-size: 0.75rem;
+    padding: 0.5rem;
   }
 
   #add-btn {
@@ -512,6 +529,7 @@ body.dark .delete-btn:hover {
     flex: 1;
     min-width: 4rem;
     padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
   }
 }
 
