@@ -12,7 +12,7 @@ body {
 }
 
 body.dark {
-  color: #f4e8d1; /* Creamy latte */
+  color: #f7e7ce; /* Soft cream */
 }
 
 .center-container {
@@ -34,8 +34,8 @@ body.dark {
 }
 
 body.dark .wrapper {
-  background-color: #2c1e14; /* Deep roasted coffee */
-  background-image: url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M10 12c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0-6c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z" fill="%23f4e8d1" fill-opacity="0.1"/%3E%3C/svg%3E');
+  background-color: #241813; /* Deep espresso brown */
+  background-image: url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M10 12c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0-6c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z" fill="%23f7e7ce" fill-opacity="0.1"/%3E%3C/svg%3E');
 }
 
 /* Theme Toggle */
@@ -65,7 +65,7 @@ body.dark .wrapper {
 }
 
 body.dark .title-text {
-  color: #f4e8d1; /* Creamy latte */
+  color: #f7e7ce; /* Soft cream */
 }
 
 .title-text::after {
@@ -88,7 +88,7 @@ body.dark .title-text {
 }
 
 body.dark .header-row {
-  border-color: #f4e8d1;
+  border-color: #f7e7ce;
 }
 
 /* Date Box */
@@ -109,8 +109,8 @@ body.dark .header-row {
 }
 
 body.dark .date-box {
-  background-color: #3b2a1e; /* Dark mocha */
-  border-color: #8c6b3e; /* Medium mocha */
+  background-color: #3c2f2f; /* Dark mocha */
+  border-color: #a67c00; /* Warm caramel */
 }
 
 .day-circle {
@@ -126,8 +126,8 @@ body.dark .date-box {
 }
 
 body.dark .day-circle {
-  background-color: #8c6b3e; /* Medium mocha */
-  color: #f4e8d1;
+  background-color: #a67c00; /* Warm caramel */
+  color: #f7e7ce;
 }
 
 .text-sm {
@@ -147,7 +147,7 @@ body.dark .day-circle {
 }
 
 body.dark .progress-box {
-  background-color: #3b2a1e; /* Dark mocha */
+  background-color: #3c2f2f; /* Dark mocha */
 }
 
 .progress-label {
@@ -157,7 +157,7 @@ body.dark .progress-box {
 }
 
 body.dark .progress-label {
-  color: #f4e8d1; /* Creamy latte */
+  color: #f7e7ce; /* Soft cream */
 }
 
 .progress-container {
@@ -169,8 +169,8 @@ body.dark .progress-label {
 }
 
 body.dark .progress-container {
-  background-color: #3b2a1e;
-  border-color: #f4e8d1;
+  background-color: #3c2f2f;
+  border-color: #f7e7ce;
 }
 
 .progress-bar {
@@ -181,7 +181,7 @@ body.dark .progress-container {
 }
 
 body.dark .progress-bar {
-  background-color: #f4e8d1;
+  background-color: #f7e7ce;
 }
 
 .progress-percent {
@@ -190,7 +190,7 @@ body.dark .progress-bar {
 }
 
 body.dark .progress-percent {
-  color: #f4e8d1;
+  color: #f7e7ce;
 }
 
 /* Input Section */
@@ -206,8 +206,8 @@ body.dark .progress-percent {
 }
 
 body.dark .input-section {
-  background-color: #3b2a1e; /* Dark mocha */
-  border-color: #f4e8d1;
+  background-color: #3c2f2f; /* Dark mocha */
+  border-color: #f7e7ce;
 }
 
 .input-row {
@@ -246,7 +246,7 @@ body.dark .input-section {
 }
 
 body.dark #task-category {
-  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"%3E%3Cpath fill="%23f4e8d1" d="M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z"/%3E%3C/svg%3E');
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"%3E%3Cpath fill="%23f7e7ce" d="M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z"/%3E%3C/svg%3E');
 }
 
 #add-btn {
@@ -264,18 +264,18 @@ body.dark #task-category {
 }
 
 body.dark #new-task, body.dark #task-time, body.dark #task-category {
-  background-color: #3b2a1e;
-  border-color: #f4e8d1;
-  color: #f4e8d1;
+  background-color: #3c2f2f;
+  border-color: #f7e7ce;
+  color: #f7e7ce;
 }
 
 body.dark #add-btn {
-  background-color: #f4e8d1;
-  color: #2c1e14;
+  background-color: #f7e7ce;
+  color: #241813;
 }
 
 body.dark #add-btn:hover {
-  background-color: #d4c2a7;
+  background-color: #d9b38c;
 }
 
 #new-task:focus, #task-time:focus, #task-category:focus {
@@ -295,7 +295,7 @@ body.dark #add-btn:hover {
 }
 
 body.dark .error-message {
-  color: #f4e8d1;
+  color: #f7e7ce;
 }
 
 /* Task Box */
@@ -309,8 +309,8 @@ body.dark .error-message {
 }
 
 body.dark .todo-box {
-  background-color: #3b2a1e; /* Dark mocha */
-  border-color: #f4e8d1;
+  background-color: #3c2f2f; /* Dark mocha */
+  border-color: #f7e7ce;
 }
 
 .todo-header {
@@ -326,7 +326,7 @@ body.dark .todo-box {
 }
 
 body.dark .donut-label {
-  color: #f4e8d1;
+  color: #f7e7ce;
 }
 
 .task-count {
@@ -334,7 +334,7 @@ body.dark .donut-label {
 }
 
 body.dark .task-count {
-  color: #f4e8d1;
+  color: #f7e7ce;
 }
 
 .clear-btn {
@@ -353,12 +353,12 @@ body.dark .task-count {
 }
 
 body.dark .clear-btn {
-  background-color: #f4e8d1;
-  color: #2c1e14;
+  background-color: #f7e7ce;
+  color: #241813;
 }
 
 body.dark .clear-btn:hover {
-  background-color: #d4c2a7;
+  background-color: #d9b38c;
 }
 
 .filter-buttons {
@@ -384,14 +384,14 @@ body.dark .clear-btn:hover {
 }
 
 body.dark .filter-btn {
-  background-color: #3b2a1e;
-  border-color: #f4e8d1;
-  color: #f4e8d1;
+  background-color: #3c2f2f;
+  border-color: #f7e7ce;
+  color: #f7e7ce;
 }
 
 body.dark .filter-btn.active, body.dark .filter-btn:hover {
-  background-color: #f4e8d1;
-  color: #2c1e14;
+  background-color: #f7e7ce;
+  color: #241813;
 }
 
 #todo-list {
@@ -413,8 +413,8 @@ body.dark .filter-btn.active, body.dark .filter-btn:hover {
 }
 
 body.dark #todo-list li {
-  background: #3b2a1e;
-  border-color: #f4e8d1;
+  background: #3c2f2f;
+  border-color: #f7e7ce;
 }
 
 #todo-list li.done {
@@ -424,7 +424,7 @@ body.dark #todo-list li {
 }
 
 body.dark #todo-list li.done {
-  background-color: #5c4632;
+  background-color: #5a4032;
 }
 
 .task-donut {
@@ -445,8 +445,8 @@ body.dark #todo-list li.done {
 }
 
 body.dark .task-category {
-  color: #f4e8d1;
-  background-color: #3b2a1e;
+  color: #f7e7ce;
+  background-color: #3c2f2f;
 }
 
 .task-time {
@@ -455,7 +455,7 @@ body.dark .task-category {
 }
 
 body.dark .task-time {
-  color: #f4e8d1;
+  color: #f7e7ce;
 }
 
 .delete-btn {
@@ -473,11 +473,11 @@ body.dark .task-time {
 }
 
 body.dark .delete-btn {
-  color: #f4e8d1;
+  color: #f7e7ce;
 }
 
 body.dark .delete-btn:hover {
-  color: #d4c2a7;
+  color: #d9b38c;
 }
 
 /* Animations */
